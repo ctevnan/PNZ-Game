@@ -2,62 +2,175 @@
 <html>
 <head>
   <title>Pirates, Ninjas, Zombies Game!</title>
-   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" type="text/css">
    <link rel="stylesheet" type="text/css" href="pnz.css">
    <link rel="stylesheet" href="css/animations.css">
 </head>
+<body class>
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+       <a class="navbar-brand" href="#">
+          <img src="1449884345_piracy/images/home.svg/" href="1449884345_piracy.png">
+          <img src="1449884679_Ninja/images/home.svg/" href="1449884679_Ninja.png">
+          <img src="1449884767_zombie/images/home.svg/" href="1449884767_zombie.png">
+        </a>
+      <div class="collapse navbar-collapse navheaderCollapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+             <a href="#contact" data-toggle="modal">Contact me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
 <div class="jumbotron">
- <div class="container">
-  <h1 div id="object1" class="bigEntrance">Pirates! Ninjas! Zombies!</h1>
-  <p div id="object2" class="slideRight">(Rock! Paper! Scissors!)</p>
-</div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-8 col-sm-4 col-sm-4">
-        <h1 id="myChoice">Your Choice</h1>
-        <h2 id="computerChoice">Computer Choice</h2>
-        <h3 id="myScore">Your Score</h3>
-        <h4 id="computerScore">Computer Score</h4>
-        <h5 id="roundNumber">Round</h5>
-     </div>
+  <div class="container">
+     <h1 div id="object1" class="bigEntrance">Pirates! Ninjas! Zombies!</h1>
+      <p div id="object2" class="slideRight">(Rock! Paper! Scissors!)</p>
    </div>
-<div class="row">
- <div class="col-xs-8 col-sm-4 col-sm-4">
-    <button type="button" id="piratebtn" class="btn btn-primary">Pirate</button>
-     <button type="button" id="ninjabtn" class="btn btn-primary">Ninja</button>  
-   <button type="button" id="zombiebtn" class="btn btn-primary">Zombie</button> 
- </div>
-</div>   
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
+</div>
+<main class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading text-center">
+       <img src="1449884345_piracy/images/home.svg/" href="1449884345_piracy.png">
+       " Pirate, "
+        <img src="1449884679_Ninja/images/home.svg/" href="1449884679_Ninja.png">
+       " Ninja, "
+      <img src="1449884767_zombie/images/home.svg/" href="1449884767_zombie.png">
+       " Zombie! Shoot!"
+       </div>
+    <div class="panel-body text-center">
+    <h3>
+      "Round:"
+      <span id="round-number">0</span>
+    </h3>
+    <h4 class="inline">Choose: </h4>
+    <button id="pirate-button" data-choice="Pirate" class="btn btn-primary btn-choices">
+      <img src="1449884345_piracy/images/home.svg/" href="1449884345_piracy.png">
+       " Pirate "
+       </button>
+     <button id="ninja-button" data-choice="Ninja" class="btn btn-primary btn-choices"> 
+       <img src="1449884679_Ninja/images/home.svg/" href="1449884679_Ninja.png">  
+       " Ninja " 
+       </button>
+     <button id="zombie-button" data-choice="Zombie" class="btn btn-primary btn-choices"> 
+        <img src="1449884767_zombie/images/home.svg/" href="1449884767_zombie.png">
+       " Zombie " 
+       </button>
+     <div id="users-choice-div">
+       <h4>
+         "You Chose:"  
+         <span id="users-choice">Pirate</span>
+         </h4>
+      </div>
+    <div id="computers-choice-div">
+      <h4>
+        "Computer Chose:"
+        <span id="computers-choice">Zombie</span>
+      </h4> 
+    </div>
+   <div id="win-msg-div">
+     <h4>
+       "Result:" 
+       <span id="win-msg">Pirate WINS!</span>
+     </h4>
+   </div>
+  <div>
+     <h4 id="you-win-or-lose-msg">You WIN this round!</h4>
+  </div>
+ <div id="score-div">
+    <h4>
+      "Tied Games:" 
+      <span class="tied-game-count">0</span>
+    </h4>
+ <h4>
+  "Your Score:"
+  <span class="user-score">0</span>
+ </h4>
+ <h4>
+   "Computer Score:" 
+  <span class="computer-score">0</span>
+ </h4>
+</div>
+<div id="start-btn-div">
+  <button id="start-button" class="btn btn-success" data-status="on">Pause</button>
+</div>
+</div>
+</div>
+</main>  
+<div class="modal fade" id="game-over-modal" tabindex="-1" role="dialog" style="display:none;">
+    <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Game Alert</h4>
+          <h4>Game Over</h4>
         </div>
-        <div class="modal-body"></div>
+        <div class="modal-body text-center">
+          <h4>
+            "Your Score:" 
+            <span class="user-score">0</span>
+          </h4>
+          <h4>
+            "Computer Score:"
+            <span class="computer-score">0</span>
+          </h4>
+          <h4>
+          "Tied Games:"
+            <span class="tied-game-count">0</span>
+          </h4>
+          <h3 id="won-lost-or-tied-msg">You WON!</h3>
+          </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
-  </div>     
-  <script>
-  $(window).scroll(function() {
-    $('#object1, #object2').each(function(){
-    var imagePos = $(this).offset().top;
-
-    var topOfWindow = $(window).scrollTop();
-      if (imagePos < topOfWindow+400) {
-        $(this).addClass("bigEntrance","slideRight");
-      }
-    });
-  });
-</script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </div>
+  </aside>
+<footer id="footer" class="navbar navbar-inverse navbar-fixed-bottom">
+<div class="container">
+<div class="collapse navbar-collapse navHeaderCollapse">
+<ul class="nav navbar-nav navbar-left">
+<li>
+  <a href="http://www.linkedin.com/in/CarolynTevnan33" target="_blank">
+  <i class="fa fa-linkedin">
+  </i>
+  </a>
+  </li>
+<li>
+  <a href="http://www.twitter.com/CarolynTevnan33" target="_blank">
+  <i class="fa fa-twitter">
+  </i>
+  </a>
+  </li>
+<li>
+   <a href="http://www.github.com/ctevnan" target="_blank">
+   <i class="fa fa-github">
+   </i>
+   </a>
+   </li>
+<li>
+   <a href="CarolynTevnan@copeoptimal.com" target="_blank">
+   <i class="fa fa-chrome">
+   </a>
+   </li>
+ <li class="u-email">
+   <a href="mailto:CarolynTevnan@copeoptimal.com" class="btn btn-email">
+     <i class="fa fa-envelope">
+     </i>
+    </a>
+   </li>
+  </ul>
+ </div>
+ <div class="modal-footer">
+   <a class="btn btn-default" data-dismiss="modal">Close</a>
+  </div>
+ </div>
+</div>
+</aside>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="pnz.js"></script>
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="scoretracker.js"></script>
 </body>
 </html>
