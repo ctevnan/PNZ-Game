@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pirate, Ninja Zombie Game!</title>
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="pnz.css">
+  <title>Pirates, Ninjas, Zombies Game!</title>
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="pnz.css">
+   <link rel="stylesheet" href="css/animations.css">
 </head>
 <div class="jumbotron">
  <div class="container">
-  <h1>Pirates! Ninjas! Zombies!</h1>
-  <p>(Rock! Paper! Scissors!)</p>
+  <h1 div id="object1" class="bigEntrance">Pirates! Ninjas! Zombies!</h1>
+  <p div id="object2" class="slideRight">(Rock! Paper! Scissors!)</p>
 </div>
 </div>
 <div class="container">
   <div class="row">
     <div class="col-xs-8 col-sm-4 col-sm-4">
-        <h1>Your Choice</h1><id="myChoice">
-        <h2>Computer Choice</h2><id="computerChoice">
-        <h3>Your Score</h3><id="myScore"></id="myScore">
-        <h4>Computer Score</h4><id="computerScore">
-        <h5>Round</h5><id="roundNumber">
+        <h1 id="myChoice">Your Choice</h1>
+        <h2 id="computerChoice">Computer Choice</h2>
+        <h3 id="myScore">Your Score</h3>
+        <h4 id="computerScore">Computer Score</h4>
+        <h5 id="roundNumber">Round</h5>
      </div>
    </div>
 <div class="row">
  <div class="col-xs-8 col-sm-4 col-sm-4">
-    <button type="button" id="piratebtn" class="btn btn-primary">Pirate </button>
-     <button type="button" id="ninjabtn" class="btn btn-primary"> Ninja</button>  
-   <button type="button" id="zombiebtn" class="btn btn-primary"> Zombie</button> 
+    <button type="button" id="piratebtn" class="btn btn-primary">Pirate</button>
+     <button type="button" id="ninjabtn" class="btn btn-primary">Ninja</button>  
+   <button type="button" id="zombiebtn" class="btn btn-primary">Zombie</button> 
  </div>
 </div>   
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -42,9 +43,21 @@
       </div>
     </div>
   </div>     
-<body>
+  <script>
+  $(window).scroll(function() {
+    $('#object1, #object2').each(function(){
+    var imagePos = $(this).offset().top;
+
+    var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+400) {
+        $(this).addClass("bigEntrance","slideRight");
+      }
+    });
+  });
+</script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="pnz.js"></script>
+<script type="text/javascript" src="pnz.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 </body>
 </html>
