@@ -5,21 +5,27 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="pnz.css">
 </head>
+<div class="jumbotron">
+ <div class="container">
+  <h1>Pirates! Ninjas! Zombies!</h1>
+  <p>(Rock! Paper! Scissors!)</p>
+</div>
+</div>
 <div class="container">
   <div class="row">
     <div class="col-xs-8 col-sm-4 col-sm-4">
-
-<h1>Your Choice</h1>
-<h2>Computer Choice</h2>
-<h3>Your Score</h3>
-<h4>Computer Score</h4>
-<h5>Round</h5>
-
+        <h1>Your Choice</h1><id="myChoice">
+        <h2>Computer Choice</h2><id="computerChoice">
+        <h3>Your Score</h3><id="myScore"></id="myScore">
+        <h4>Computer Score</h4><id="computerScore">
+        <h5>Round</h5><id="roundNumber">
+     </div>
+   </div>
 <div class="row">
  <div class="col-xs-8 col-sm-4 col-sm-4">
-    <button type="button" data-tag="changeWordButton">Pirate </button>
-     <button type="button" data-tag="changeWordButton"> Ninja</button>  
-   <button type="button" data-tag="changeWordButton"> Zombie</button> 
+    <button type="button" id="piratebtn" class="btn btn-primary">Pirate </button>
+     <button type="button" id="ninjabtn" class="btn btn-primary"> Ninja</button>  
+   <button type="button" id="zombiebtn" class="btn btn-primary"> Zombie</button> 
  </div>
 </div>   
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
