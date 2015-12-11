@@ -12,4 +12,4 @@ $(document).ready(function(){
 
   $(".gamebuttons").on("click", function()
 
-    uhhhhhhhhhhhhhhhh
+    uhhhhhhh
