@@ -1,13 +1,23 @@
-(document).ready(function()
+$(document).ready(function(){
+  //$(window).scroll(function() {
+    //$('#object1, #object2').each(function(){
+   // var imagePos = $(this).offset().top;
+
+    //var topOfWindow = $(window).scrollTop();
+     // if (imagePos < topOfWindow+400) {
+      //  $(this).addClass("bigEntrance","slideRight");
+    //  }
+   // });
+ // });
 
 var myWords = ["Pirate", "Ninja", "Zombie"];
 
   $("#changeWordBtn").on("click", function() {
     var myRandomNumber = Math.floor(Math.random() * myWords.length);
-    $("h1").fadeIn(250, function() {
-      $(this).html(myWords[myRandomNumber]);
-      $(this).fadeOut(1000);
-    });
+    $("h1").html(myWords[myRandomNumber]);
+     // $(this).html(myWords[myRandomNumber]);
+     // $(this).fadeOut(1000);
+   // });
 
   });
 });
@@ -68,7 +78,3 @@ var computerChoice = 0;
 var userScore = 0;
 var enemyScore = 0;
 var rounds = 0;
-
-$(document).ready(function(){
-
-  $(".gamebuttons").on("click", function()
