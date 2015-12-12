@@ -1,3 +1,24 @@
+body {
+  background-color: #505050, rgb(80,80,80);
+}
+
+.whoajumbo {
+  background-color: #009900;
+}
+
+.toppietop {
+  background-color: #009900;
+}
+
+.bod {
+  background-color: #00CC00;
+}
+
+.object1, .object2 {
+  font-family: 'Gloria Hallelujah';
+  font-style: 'cursive';
+}
+
 .image-list li{
     display:inline;
 }
