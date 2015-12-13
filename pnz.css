@@ -22,3 +22,11 @@ body {
 .image-list li{
     display:inline;
 }
+
+.a-btn.btn-primary.btn-lg {
+   display:inline;
+}
+
+div.jumbotron {
+   display:center;
+}
