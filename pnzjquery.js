@@ -2,9 +2,7 @@
 $(Document).ready(function(){
 
 var choices = ["pirate", "ninja", "zombie"];
-
 //value of btn click
-
 function bindControls(){
   $(".btn-primary").on("click", function() {
     var userChoice = $(this).attr("data-choice");
@@ -15,11 +13,12 @@ function bindControls(){
   });
 }
 
-bindControls();
-
+function bindControls(){
 $(document).on("click", "#reset-button" , function() {
       restoreDefault();
- });
+    });
+  }};      
+});
  
  function gameLogic(userChoice, computerChoice) {
 
@@ -54,7 +53,7 @@ $(document).on("click", "#reset-button" , function() {
      tie ();
 }
 
-roundIncrement();
+function roundIncrement();
 
 if (PNZ.gameState.roundCount === 5) {
    $("#outcome").html("Game over. Why don't you try again?");

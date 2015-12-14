@@ -22,7 +22,6 @@ var myWords = ["Pirate", "Ninja", "Zombie"];
   });
 });
 
- {
   var buttonChoices = ["pirate", "ninja", "zombie"];
 
   function randomButton() {
@@ -54,10 +53,10 @@ var myWords = ["Pirate", "Ninja", "Zombie"];
     });
 
       randomButton();
-      });
+  });
 
     randomButton();
-  });
+
   var myWords = ["Pirate", "Ninja", "Zombie"];
 
   $("#changeWordBtn").on("click", function() {
@@ -68,11 +67,11 @@ var myWords = ["Pirate", "Ninja", "Zombie"];
     });
 
   });
-});
+
 
   $("gamebuttons").on("click", function(){
-    var bid = $ (this).attr("id")
-}
+    var bid = $(this).attr("id")
+  });
 var userChoice = 0;
 var computerChoice = 0;
 var userScore = 0;
