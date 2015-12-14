@@ -77,4 +77,4 @@ var userChoice = 0;
 var computerChoice = 0;
 var userScore = 0;
 var enemyScore = 0;
-var rounds = 0;
+var round = 0;
