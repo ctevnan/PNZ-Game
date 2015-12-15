@@ -19,11 +19,11 @@ body {
   font-style: "cursive";
 }
 
-.image-list li{
+.image-list li {
     display:inline;
 }
 
-.a-btn.btn-primary.btn-lg {
+.btn-btn-default {
    display:inline;
 }
 

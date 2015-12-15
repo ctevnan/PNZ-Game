@@ -1,7 +1,18 @@
 .jumbotron {
-  text-align: center
+  text-align: center;
+}
+.p {
+  text-align: center;
 }
 
-div.col-sm-5 {
-  text-align: center
+.div.col-sm-5 {
+  text-align: center;
+}
+
+.div#contact-carolyn.container {
+  text-align: center;
+}
+
+.contact-carolyn {
+  text-align: center;
 }
