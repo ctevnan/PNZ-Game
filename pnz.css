@@ -30,3 +30,16 @@ body {
 .jumbotron {
    display:center;
 }
+
+.other-color {
+  background: green;
+}
+
+.panel-heading.text-center.other-color {
+  background: green;
+}
+
+.panel-body.text-center.other-color {
+  background: lightgreen;
+}
+
