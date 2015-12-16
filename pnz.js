@@ -71,7 +71,7 @@ function bindControls(){
   $(".btn-primary").on("click", function() {
     var userChoice = $(this).attr("data-choice");
     console.log(userChoice);
-    var computerChoice = Math.floor(Math.random() * choices.length;
+    var computerChoice = Math.floor(Math.random() * choices.length);
     console.log(choices[computerChoice]);
     gameLogic(userChoice, computerChoice);
   });
