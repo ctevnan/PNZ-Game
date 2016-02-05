@@ -1,161 +1,158 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Pirates, Ninjas, Zombies Game!</title>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" type="text/css">
-   <link rel="stylesheet" href="pnz.css" type="text/css">
-   <link rel="stylesheet" href="css-animations.css" type="text/css">
-</head>
-<body class>
-  <nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container">
-       <a class="navbar-brand" href="#">
-         <ul class="image-list">
-          <li><li class="active"><a href="contactpage.html" target="_blank">Contact</a></li>
-          <li><img src="https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png"></li>
-          <li><img src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png"></li>
-          <li><img src="https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png"></li>
-       </ul>
-      </a> 
-     </div>
-    </nav>
-   <div class="collapse navbar-collapse navheaderCollapse">
-  <ul class="nav navbar-nav navbar-center">
- </ul>
-</div>
-      <div class="jumbotron other-color">
-    <div id="whoajumbo">
-  <div class="container">
-     <h1 div id="object1">Pirates! Ninjas! Zombies!</h1>
-      <p div id="object2">(Rock! Paper! Scissors!)</p>
-   </div>
-  </div>
- </div>
-</div>
-<main class="container">
-  <div class="panel panel-default" div id="toppietop">
-    <div class="panel-heading text-center other-color">
-       <img src="https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png">
-       " Pirate, "
-        <img src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png">
-       " Ninja, "
-        <img src="https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png">
-       " Zombie! Shoot!"
-       </div>
-    <div class="panel-body text-center other-color" div id="bod">
-    <h3>
-      <strong>Round Count: </strong>
-      <span id="#roundNumber">0</span>
-      <br/>
-      <button class="btn btn-info btn">Increase Round Count</button>
-    </h3>
-    <h4 class="inline">Choose: </h4>
-    <button id="pirate-button" data-choice="Pirate" class="btn btn-primary">
-      <img src="https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/32/piracy.png">
-       " Pirate "
-       </button>
-     <button id="ninja-button" data-choice="Ninja" class="btn btn-primary"> 
-        <img src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-32.png">
-       " Ninja " 
-       </button>
-     <button id="zombie-button" data-choice="Zombie" class="btn btn-primary"> 
-        <img src="https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-32.png">
-       " Zombie " 
-       </button>
-       </div>
-     <div id="users-choice-div">
-       <h4>
-         "You Chose:" 
-         <span id="#userschoice"></span>
-         </h4>
+    <head>
+      <title>Pirates, Ninjas, Zombies Game!</title>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" type="text/css">
+         <link rel="stylesheet" href="pnz.css" type="text/css">
+         <link rel="stylesheet" href="css-animations.css" type="text/css">
+    </head>
+      <body class>
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+             <a class="navbar-brand" href="#">
+                <ul class="image-list">
+                <li><li class="active"><a href="contactpage.html" target="_blank">Contact</a></li>
+                <li><img src="https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png"></li>
+                <li><img src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png"></li>
+                <li><img src="https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png"></li>
+               </ul>
+             </a> 
+          </div>
+        </nav>
+         <div class="collapse navbar-collapse navheaderCollapse">
+            <ul class="nav navbar-nav navbar-center"></ul>
+         </div>
+         <div class="jumbotron other-color">
+            <div id="whoajumbo">
+              <div class="container">
+                <h1 div id="object1">Pirates! Ninjas! Zombies!</h1>
+                  <p div id="object2">(Rock! Paper! Scissors!)</p>
+              </div>
+           </div>
+         </div>
       </div>
-    <div id="computers-choice-div">
-      <h4>
-        "Computer Chose:"
-        <span id="#computerschoice"></span>
-      </h4> 
-    </div>
-   <div id="win-msg-div">
-     <h4>
-       "Result:" 
-       <span id="win-msg"></span>
-     </h4>
-   </div>
-  <div>
-     <h4 id="you-win-or-lose-msg"></h4>
-  </div>
-<div id="start-btn-div">
-  <button id="start-button" class="btn btn-success" data-status="on">Pause</button>
-</div>
-</div>
-<!-- Button trigger modal -->
-<div id="modal-btn-div">
-   <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Score modal</button>
-</div>
-</main> 
- <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>Close</button>
-        <h4 class="modal-title" id="#myModal">Score modal</h4>
-      </div>
-      <div class="modal-body">
-          <h4>Game Over</h4>
+        <main class="container">
+          <div class="panel panel-default" div id="toppietop">
+            <div class="panel-heading text-center other-color">
+               <img src="https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png">
+               " Pirate, "
+                <img src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png">
+               " Ninja, "
+                <img src="https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png">
+               " Zombie! Shoot!"
+               </div>
+            <div class="panel-body text-center other-color" div id="bod">
+            <h3>
+              <strong>Round Count: </strong>
+              <span id="#roundNumber">0</span>
+              <br/>
+              <button class="btn btn-info btn">Increase Round Count</button>
+            </h3>
+            <h4 class="inline">Choose: </h4>
+            <button id="pirate-button" data-choice="Pirate" class="btn btn-primary">
+              <img src="https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/32/piracy.png">
+               " Pirate "
+               </button>
+             <button id="ninja-button" data-choice="Ninja" class="btn btn-primary"> 
+                <img src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-32.png">
+               " Ninja " 
+               </button>
+             <button id="zombie-button" data-choice="Zombie" class="btn btn-primary"> 
+                <img src="https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-32.png">
+               " Zombie " 
+               </button>
+               </div>
+             <div id="users-choice-div">
+               <h4>
+                 "You Chose:" 
+                 <span id="#userschoice"></span>
+                 </h4>
+              </div>
+            <div id="computers-choice-div">
+              <h4>
+                "Computer Chose:"
+                <span id="#computerschoice"></span>
+              </h4> 
+            </div>
+           <div id="win-msg-div">
+             <h4>
+               "Result:" 
+               <span id="win-msg"></span>
+             </h4>
+           </div>
+          <div>
+             <h4 id="you-win-or-lose-msg"></h4>
+          </div>
+        <div id="start-btn-div">
+          <button id="start-button" class="btn btn-success" data-status="on">Pause</button>
         </div>
-        <div class="modal-body text-center">
-          <h4>
-            "Your Score: " 
-            <span class="user-score">0</span>
-          </h4>
-          <h4>
-            "Computer Score: "
-            <span class="computer-score">0</span>
-          </h4>
-          <h4>
-          "Tied Games: "
-            <span class="tied-game-count">0</span>
-          </h4>
-          <h3 id="won-lost-or-tied-msg"></h3>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-</aside>
-<footer id="footer" class="navbar navbar-inverse navbar-fixed-bottom">
-  <div class="container">
-    <div class="collapse navbar-collapse navHeaderCollapse">
-      <ul class="nav navbar-nav navbar-left">
-        <li>
-          <a href="http://www.linkedin.com/in/CarolynTevnan33" target="_blank">
-            <i class="fa fa-linkedin">
-            </i>
-          </a>
-        </li>
-        <li>
-         <a href="http://www.twitter.com/CarolynTevnan33" target="_blank">
-           <i class="fa fa-twitter">
-           </i>
-          </a>
-        </li>
-         <li>
-            <a href="http://www.github.com/ctevnan" target="_blank">
-             <i class="fa fa-github">
-             </i>
-            </a>
-         </li>
-      </ul>
-    </div>
-  </div>
-</aside>
-</footer>
+        </div>
+        <!-- Button trigger modal -->
+        <div id="modal-btn-div">
+           <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Score modal</button>
+        </div>
+        </main> 
+         <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>Close</button>
+                <h4 class="modal-title" id="#myModal">Score modal</h4>
+              </div>
+              <div class="modal-body">
+                  <h4>Game Over</h4>
+                </div>
+                <div class="modal-body text-center">
+                  <h4>
+                    "Your Score: " 
+                    <span class="user-score">0</span>
+                  </h4>
+                  <h4>
+                    "Computer Score: "
+                    <span class="computer-score">0</span>
+                  </h4>
+                  <h4>
+                  "Tied Games: "
+                    <span class="tied-game-count">0</span>
+                  </h4>
+                  <h3 id="won-lost-or-tied-msg"></h3>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer id="footer" class="navbar navbar-inverse navbar-fixed-bottom">
+          <div class="container">
+            <div class="collapse navbar-collapse navHeaderCollapse">
+              <ul class="nav navbar-nav navbar-left">
+                <li>
+                  <a href="http://www.linkedin.com/in/CarolynTevnan33" target="_blank">
+                    <i class="fa fa-linkedin">
+                    </i>
+                  </a>
+                </li>
+                <li>
+                 <a href="http://www.twitter.com/CarolynTevnan33" target="_blank">
+                   <i class="fa fa-twitter">
+                   </i>
+                  </a>
+                </li>
+                 <li>
+                    <a href="http://www.github.com/ctevnan" target="_blank">
+                     <i class="fa fa-github">
+                     </i>
+                    </a>
+                 </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="pnz.js"></script>
