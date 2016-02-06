@@ -27,12 +27,11 @@
          <div class="jumbotron other-color">
             <div id="whoajumbo">
               <div class="container">
-                <h1 div id="object1">Pirates! Ninjas! Zombies!</h1>
+                  <h2 div id="object1">Pirates! Ninjas! Zombies!</h2>
                   <p div id="object2">(Rock! Paper! Scissors!)</p>
               </div>
            </div>
          </div>
-      </div>
         <main class="container">
           <div class="panel panel-default" div id="toppietop">
             <div class="panel-heading text-center other-color">
@@ -44,51 +43,43 @@
                " Zombie! Shoot!"
                </div>
             <div class="panel-body text-center other-color" div id="bod">
-            <h3>
-              <strong>Round Count: </strong>
-              <span id="#roundNumber">0</span>
-              <br/>
-              <button class="btn btn-info btn">Increase Round Count</button>
-            </h3>
-            <h4 class="inline">Choose: </h4>
-            <button id="pirate-button" data-choice="Pirate" class="btn btn-primary">
-              <img src="https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/32/piracy.png">
-               " Pirate "
-               </button>
-             <button id="ninja-button" data-choice="Ninja" class="btn btn-primary"> 
-                <img src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-32.png">
-               " Ninja " 
-               </button>
-             <button id="zombie-button" data-choice="Zombie" class="btn btn-primary"> 
-                <img src="https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-32.png">
-               " Zombie " 
-               </button>
-               </div>
-             <div id="users-choice-div">
-               <h4>
-                 "You Chose:" 
-                 <span id="#userschoice"></span>
-                 </h4>
-              </div>
-            <div id="computers-choice-div">
-              <h4>
-                "Computer Chose:"
-                <span id="#computerschoice"></span>
-              </h4> 
+            <div class="container"></div>
+            <div class="row"></div>
+            <div class="col-md-6">
+              <button class="btn btn-block" id="changeWordButton">Change that word!</button>
             </div>
-           <div id="win-msg-div">
-             <h4>
-               "Result:" 
-               <span id="win-msg"></span>
-             </h4>
-           </div>
-          <div>
-             <h4 id="you-win-or-lose-msg"></h4>
-          </div>
+               <div class="col-md-6">
+                 <h1></h1>
+               </div>
+              <br />
+              <br />
+              <br /> 
+              <br />
+              <br />      
+              <div class="row">
+                <div class="col-md-4">
+                  <strong>User Score: </strong><span id="userScore">0</span>
+                  <br />
+                  <button class="btn btn-info" data-tag="userScore">User Score</button>
+                </div>
+                <div class="col-md-4">
+                  <strong>Computer Score: </strong><span id="computerScore">0</span>
+                  <br />
+                  <button class="btn btn-info" data-tag="computerScore">Computer Score</button>
+                </div>
+                <div class="col-md-4">
+                  <strong>Round Count: </strong><span id="roundCount">1</span>
+                  <br />
+                  <button class="btn btn-info" data-tag="roundCount">Round Count</button>
+                </div>
+              </div>  
         <div id="start-btn-div">
-          <button id="start-button" class="btn btn-success" data-status="on">Pause</button>
+          <br />
+          <br />
+          <button id=".btn-primary" class="btn btn-success" data-status="on">Primary Button</button>
         </div>
-        </div>
+        <br />
+        <br />
         <!-- Button trigger modal -->
         <div id="modal-btn-div">
            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Score modal</button>
@@ -107,15 +98,15 @@
                 </div>
                 <div class="modal-body text-center">
                   <h4>
-                    "Your Score: " 
+                    "Your Score:    " 
                     <span class="user-score">0</span>
                   </h4>
                   <h4>
-                    "Computer Score: "
+                    "Computer Score:    "
                     <span class="computer-score">0</span>
                   </h4>
                   <h4>
-                  "Tied Games: "
+                  "Tied Games:    "
                     <span class="tied-game-count">0</span>
                   </h4>
                   <h3 id="won-lost-or-tied-msg"></h3>
@@ -153,7 +144,7 @@
             </div>
           </div>
         </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="pnz.js"></script>
 <script type="text/javascript" src="scoretracker.js"></script>

@@ -1,18 +1,17 @@
-window.pirateNinjaZombie = {
-  gameState: {
+$(document).ready(function () {
+  var gameState = {
+    userChoice: 0,
+    computerChoice: 0,
     userScore: 0,
     computerScore: 0,
     roundCount: 1
   }
-}
+  
+  $(".btn-info").on("click", function () {
+    var tagName = $(this).attr("data-tag");
+    gameState[tagName]++;
 
-$(document).ready(function() {
+    $("#" + tagName).html(gameState[tagName]);
+  });
 
-$(".btn-info").on("click", function() {
-  var tagName = $(this).data("tag");
-  pirateNinjaZombie.gameState[tagName]++;
-
-  $("#"+ tagName).html(pirateNinjaZombie.gameState[tagName]);
-});
-
-});
+});    
