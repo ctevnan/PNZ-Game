@@ -1,4 +1,9 @@
-function bindControls(){
+$(document).ready(function() {
+  var buttonChoices = ["pirate", "ninja", "zombie"];
+
+  $(".btn-primary")
+}
+function bindControls() {
   $(".btn-primary").on("click", function() {
     var userChoice = $(this).attr("data-choice");
     console.log(userChoice);
@@ -8,8 +13,8 @@ function bindControls(){
   });
 });
 
-function bindControls(){
-$(document).on("click", "#reset-button" , function() {
+function bindControls() {
+$(document).on("click", "#reset-button", function() {
       restoreDefault();
     });     
  
@@ -46,9 +51,8 @@ $(document).on("click", "#reset-button" , function() {
      tie ();
 }
 
-function roundIncrement()
-
-PNZ.gameState.roundCount === 5 
+function roundIncrement() {
+  PNZ.gameState.roundCount === 5 
    $("#outcome").html("Game over. Why don't you try again?");
    if (PNZ.gameState.userScore > PNZ.gameState.computerScore) {
       $("#outcome").append("<div>Hey, wow! You won! Congratulations.</div>");
@@ -75,7 +79,7 @@ function userWin() {
 };
 
 function computerWin() {
-     PNZ.gameState.computerScore);
+     PNZ.gameState.computerScore++;
      console.log(PNZ.gameState.computerScore);
      $("#computerScore").html(PNZ.gameState.computerScore);
      $("#outcome").html("You lost. Better luck next time!");
@@ -127,19 +131,17 @@ window.PNZ = {
 }
 
 var pirateNinja = function() {
-  $("#user").removeClass("https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png");         
-  $("#user").addClass("https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png");
-  $("#computer").removeClass("https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png");
-  $("#computer").addClass("https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png"); 
-};
-
-var pirateZombie = function(){
-  $("#user").removeClass("https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png");
-  $("#user").addClass("https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png");
-  $("#computer").removeClass("https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png");
-  $("#computer").addClass("https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png");
-};
-
+      $("#user").removeClass("https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png");         
+      $("#user").addClass("https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png");
+      $("#computer").removeClass("https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png");
+      $("#computer").addClass("https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png"); 
+  };
+var pirateZombie = function() {
+      $("#user").removeClass("https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png");
+      $("#user").addClass("https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png");
+      $("#computer").removeClass("https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png");
+      $("#computer").addClass("https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png");
+  };
 var ninjaPirate = function() {
       $("#user").removeClass("https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png");
       $("#user").addClass("https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png");
