@@ -6,7 +6,7 @@ window.gamelogic = {
   }
 }
 
-$(document).ready(function () {
+$(document).ready(function() {
 
   $(".btn-info").on("click", function() {
     var tagName = $(this).data("tag");
