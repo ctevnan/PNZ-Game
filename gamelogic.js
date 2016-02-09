@@ -15,18 +15,18 @@ $(document).ready(function() {
         } else if(computerChoice === 0 && userChoice === 1) {
           //Computer gets a point
           $(".modal-body").html("Computer wins!");
-          gamelogic.gameState.computerScore++;
+          window.gamelogic.gameState.computerScore++;
         } else if(computerChoice === 1 && userChoice === 0) {
           //User gets a point
         } $(".modal-body").html("User wins!");
 
-          gamelogic.gameState.userScore++;
+          window.gamelogic.gameState.userScore++;
         })
         $("#myModal").modal("show");
-        gamelogic.gameState.roundCount++;
+        window.gamelogic.gameState.roundCount++;
 
         $("span").each(function() {
-          $(this).html(gamelogic.gameState[$(this).attr("id")]);
+          $(this).html(window.gamelogic.gameState[$(this).attr("id")]);
         });
 
       randomButton();
@@ -36,15 +36,15 @@ $(document).ready(function() {
   ;  
 
 
-//  function bindControls() {
-//    $(".btn-primary").on("click", function() {
-//      var userChoice = $(this).attr("data-choice");
-//      console.log(userChoice);
-//      var computerChoice = Math.floor(Math.random() * choices.length);
-//      console.log(choices[computerChoice]);
-//      gameLogic(userChoice, computerChoice);
-//  });
-//});
+ function bindControls() {
+   $(".btn-primary").on("click", function() {
+      var userChoice = $(this).attr("data-choice");
+      console.log(userChoice);
+      var computerChoice = Math.floor(Math.random() * choices.length);
+      console.log(choices[computerChoice]);
+      window.gameLogic(userChoice, computerChoice);
+  });
+};
 
 //function bindControls() {
 //$(document).on("click", "#reset-button", function() {

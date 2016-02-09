@@ -10,8 +10,8 @@ $(document).ready(function() {
 
   $(".btn-info").on("click", function() {
     var tagName = $(this).data("tag");
-    gamelogic.gameState[tagName]++;
+    window.gamelogic.gameState[tagName]++;
 
-    $("#" + tagName).html(gamelogic.gameState[tagName]);
+    $("#" + tagName).html(window.gamelogic.gameState[tagName]);
   });
 });    
