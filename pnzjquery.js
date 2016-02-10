@@ -1,0 +1,1 @@
+$('#myActiveGamescoreModal').modal("hide");
