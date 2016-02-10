@@ -1,9 +1,10 @@
 $('#myActiveGamescoreModal').modal("hide");
 
-$('.choice-btn').on("click", function(gameLogic, userChoice, computerChoice) {
+$('.choice-btn').on("click", function() {
    var computerChoice = buttonChoices[Math.floor(Math.random() * buttonChoices.length -1) +1]
    var userChoice = this.getAttribute('data-choice');
-   
+
+  gameLogic(userChoice, computerChoice);
  //for wins
  if (userChoice === "pirate" && choices[computerChoice] === "ninja")  {
     pirateNinja ();
@@ -35,3 +36,6 @@ $('.choice-btn').on("click", function(gameLogic, userChoice, computerChoice) {
 }
 
 }
+
+$('.choice-btn').on("click", function() {
+ var userChoice = this.getAttribute("data-choice");
