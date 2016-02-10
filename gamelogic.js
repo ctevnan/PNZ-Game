@@ -46,90 +46,90 @@ $(document).ready(function() {
   });
 };
 
-//function bindControls() {
-//$(document).on("click", "#reset-button", function() {
-//      restoreDefault();
-//    });     
+function bindControls() {
+$(document).on("click", "#reset-button", function() {
+      restoreDefault();
+    });     
  
-// function gameLogic(userChoice, computerChoice) {
+ function gameLogic(userChoice, computerChoice) {
 
  //for wins
 
-// if (userChoice === "pirate" && choices[computerChoice] === "ninja")  {
-//    pirateNinja ();
-//    computerWin();
-//} else if (userChoice === "pirate" && choices[computerChoice] === "zombie") {
-//    pirateZombie ();
-//    userWin ();
-//} else if (userChoice === "pirate" && choices [computerChoice] === "pirate") {
-//    ninjaPirate ();
-//    userWin ();
-//} else if (userChoice === "ninja" && choices [computerChoice] === "zombie") {
-//    ninjaZombie ();
-//    computerWin ();
-//} else if (userChoice === "zombie" && choices [computerChoice] === "pirate") {
-//     zombiePirate ();
-//     computerWin ();
-//} else if (userChoice === "zombie" && choices [computerChoice] === "ninja")  {
-//     zombieNinja ();
-//     userWin ();
-//} else if (userChoice === "pirate" && choices [computerChoice] === "pirate") {
-//     piratePirate ();
-//     tie ();
-//} else if (userChoice === "ninja" && choices [computerChoice] === "ninja")  {
-//     ninjaNinja ();
-//     tie ();
-//} else if (userChoice === "zombie" && choices [computerChoice] === "zombie") {
-//     zombieZombie ();
-//     tie ();
-//}
+ if (userChoice === "pirate" && choices[computerChoice] === "ninja")  {
+    pirateNinja ();
+    computerWin();
+ } else if (userChoice === "pirate" && choices[computerChoice] === "zombie") {
+   pirateZombie ();
+    userWin ();
+} else if (userChoice === "pirate" && choices [computerChoice] === "pirate") {
+    ninjaPirate ();
+        userWin ();
+} else if (userChoice === "ninja" && choices [computerChoice] === "zombie") {
+    ninjaZombie ();
+    computerWin ();
+} else if (userChoice === "zombie" && choices [computerChoice] === "pirate") {
+     zombiePirate ();
+     computerWin ();
+} else if (userChoice === "zombie" && choices [computerChoice] === "ninja")  {
+     zombieNinja ();
+          userWin ();
+} else if (userChoice === "pirate" && choices [computerChoice] === "pirate") {
+     piratePirate ();
+     tie ();
+} else if (userChoice === "ninja" && choices [computerChoice] === "ninja")  {
+     ninjaNinja ();
+     tie ();
+} else if (userChoice === "zombie" && choices [computerChoice] === "zombie") {
+     zombieZombie ();
+     tie ();
+}
 
-//function roundIncrement() {
-//  PNZ.gameState.roundCount === 5 
-//   $("#outcome").html("Game over. Why don't you try again?");
-//   if (PNZ.gameState.userScore > PNZ.gameState.computerScore) {
-//      $("#outcome").append("<div>Hey, wow! You won! Congratulations.</div>");
-//  } else if (PNZ.gameState.ties > PNZ.gameState.computerScore && PNZ.gameState.userScore) {
-//      $("#outcome").append("<div>You lost, but you can always try again!</div>");
-//  } else if (PNZ.gameState.userScore < PNZ.gameState.computerScore) {
-//      $("#outcome").append("<div>You lost. Better luck next time!</div>");
-//  }
+function roundIncrement() {
+  PNZ.gameState.roundCount === 5 
+   $("#outcome").html("Game over. Why don't you try again?");
+   if (PNZ.gameState.userScore > PNZ.gameState.computerScore) {
+      $("#outcome").append("<div>Hey, wow! You won! Congratulations.</div>");
+  } else if (PNZ.gameState.ties > PNZ.gameState.computerScore && PNZ.gameState.userScore) {
+      $("#outcome").append("<div>You lost, but you can always try again!</div>");
+  } else if (PNZ.gameState.userScore < PNZ.gameState.computerScore) {
+      $("#outcome").append("<div>You lost. Better luck next time!</div>");
+  }
   
-//  $(".btn-primary").unbind();
-//  $("#reset-button").addClass("btn btn-danger btn-block").append("Play again!");
-//  $("#reset-button").show();
+  $(".btn-primary").unbind();
+  $("#reset-button").addClass("btn btn-danger btn-block").append("Play again!");
+  $("#reset-button").show();
 
-// };
-//};
+ };
+};
 
 //for win
 
-//function userWin() {
-//     PNZ.gameState.userScore++;
- //    console.log(PNZ.gameState.userScore);
-//     $("#userScore").html(PNZ.gameState.userScore);
-//     $("#outcome").html("Hey, wow! You won! Congratulations.");
-//};
+function userWin() {
+    PNZ.gameState.userScore++;
+    console.log(PNZ.gameState.userScore)
+     $("#userScore").html(PNZ.gameState.userScore);
+     $("#outcome").html("Hey, wow! You won! Congratulations.");
+};
 
-//function computerWin() {
-//     PNZ.gameState.computerScore++;
-//     console.log(PNZ.gameState.computerScore);
-//     $("#computerScore").html(PNZ.gameState.computerScore);
-//     $("#outcome").html("You lost. Better luck next time!");
-//};
+function computerWin() {
+     PNZ.gameState.computerScore++;
+     console.log(PNZ.gameState.computerScore);
+        $("#computerScore").html(PNZ.gameState.computerScore);
+        $("#outcome").html("You lost. Better luck next time!");
+};
 
-//function tie() {
- //     PNZ.GameState.ties++;
-//      console.log(ties);
-//      $("#ties").html(PNZ.gameState.ties);
-//      $("#outcome").html("You lost, but you can always try again!");
-//};
+function tie() {
+     PNZ.GameState.ties++;
+      console.log(ties);
+      $("#ties").html(PNZ.gameState.ties);
+      $("#outcome").html("You lost, but you can always try again!");
+};
 
-//function roundIncrement() {
-//      PNZ.gameState.roundCount++;
-//      $("#roundNumber").html(PNZ.gameState.roundCount);
-//      console.log(PNZ.gameState.roundCount);
-//};
+function roundIncrement() {
+      PNZ.gameState.roundCount++;
+      $("#roundNumber").html(PNZ.gameState.roundCount);
+      console.log(PNZ.gameState.roundCount);
+};
 
 //here, after the game is played, we restore to default setting
 
