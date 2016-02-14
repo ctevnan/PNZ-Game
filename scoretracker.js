@@ -1,9 +1,9 @@
-window.gamelogic = {
-  gameState = {
+window.gameLogic = 
+  gameState {
+
     userScore: 0,
     computerScore: 0,
     roundCount: 1
-  }
 }
 
 $(document).ready(function() {
