@@ -109,14 +109,14 @@ function restoreDefault() {
 //now we restore our default scores to their origional values
 
 function restoreDefaultScores() {
-     PNZ.gameState.userScore = 0;
-     PNZ.gameState.computerScore = 0;
-     PNZ.gameState.ties = 0;
-     PNZ.gameState.roundCount = 1;
-     $("#userScore").html(PNZ.gameState.userScore);
-     $("#computerScore").html(PNZ.gameState.computerScore);
-     $("#ties").html(PNZ.gameState.ties);
-     $("#roundNumber").html(PNZ.gameState.roundCount);
+  PNZ.gameState.userScore = 0;
+  PNZ.gameState.computerScore = 0;
+  PNZ.gameState.ties = 0;
+  PNZ.gameState.roundCount = 1;
+  $("#userScore").html(PNZ.gameState.userScore);
+  $("#computerScore").html(PNZ.gameState.computerScore);
+  $("#ties").html(PNZ.gameState.ties);
+  $("#roundNumber").html(PNZ.gameState.roundCount);
 };
 
 window.PNZ = {
