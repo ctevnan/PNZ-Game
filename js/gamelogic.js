@@ -12,10 +12,30 @@ var computerStrings = [
   'zombie'
 ];
 
-  function randomButton() {
-    var randomIndex = Math.floor(Math.random() * computerStrings.length);
-    $(".btn-primary").html(computerStrings[randomIndex]).attr("data-selection", randomIndex);
-  }
+function playersTurn() {
+  playerGoChoose = $(this).getAttribute("class");
+  playerGoChoose = playerGoChoose.replace('button' , '');
+  playerGoChoose = playerGoChoose.replace('control', '');
+  playerGoChoose = playerGoChoose.replace('animate', '');
+  gameLogic();
+  pnzAnimate();
+}
+
+function scoreUpdate() {
+  $('.player-score .score-value').html(playerScore);
+  $('.computer-score .score-value').html(computerScore);
+}
+
+function gameLogic() {
+  var randomIndex = Math.floor(Math.random() * computerStrings.length);
+}
+
+computerGoChoose = computerStrings[randomIndex];
+
+if(playerGoChoose == computerGoChoose) {
+  gameState = 'tie';
+  roundCount += 1;
+}
  
   $(".btn-primary").on("click", function() {
     var computerGoSelect = Math.floor(Math.random() * computerStrings.length);
@@ -38,11 +58,7 @@ var computerStrings = [
 
         $("span").each(function() {
           $(this).html(window.gamelogic.gameState[$(this).attr("id")]);
-        });
-      var randomButton();
-    });
-    var randomButton();
-  ;  
+        });  
 
 
  function bindControls() {
@@ -254,13 +270,14 @@ window.PNZ = {
   }
 };
 
-window.gameLogic = 
-  gameState {
-
+window.gameLogic = {
+  gameState: {
     userScore: 0,
     computerScore: 0,
+    ties: 0,
     roundCount: 1
-}
+  }
+};  
 
   $(".btn-info").on("click", function() {
     var tagName = $(this).data("tag");
