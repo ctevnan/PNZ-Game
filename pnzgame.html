@@ -24,14 +24,14 @@
          <div class="collapse navbar-collapse navheaderCollapse">
             <ul class="nav navbar-nav navbar-center"></ul>
          </div>
-         <div class="jumbotron other-color" id="whoajumbo">
+         <div class="jumbotron other-color" id="jumbo">
             <div class="container">
               <h2 div id="object1">Pirates! Ninjas! Zombies!</h2>
               <p div id="object2">(Rock! Paper! Scissors!)</p>
            </div>
          </div>
         <main class="container">
-          <div class="panel panel-default" div id="toppietop">
+          <div class="panel panel-default" id="top">
             <div class="panel-heading text-center other-color">
                <img src="https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png">
                " Pirate, "
@@ -41,7 +41,7 @@
                " Zombie!!"
             </div>
           </div>
-            <div class="panel-body text-center other-color" div id="bod">
+            <div class="panel-body text-center other-color" id="body">
               <div class="container">
                 <div class="row">
                   <div class="col-md-6">
@@ -142,8 +142,7 @@
                 </li>
                 <li>
                  <a href="http://www.twitter.com/CarolynTevnan33" target="_blank">
-                   <i class="fa fa-twitter">
-                   </i>
+                   <i class="fa fa-twitter"></i>
                   </a>
                 </li>
                  <li>
@@ -156,10 +155,19 @@
             </div>
           </div>
         </footer>
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBpNNPSsJgw703xOUvzNzxJfJu5SOKIcVk",
+    authDomain: "pirate-ninja-zombies-game.firebaseapp.com",
+    databaseURL: "https://pirate-ninja-zombies-game.firebaseio.com",
+    storageBucket: "",
+  };
+  firebase.initializeApp(config);
+  </script> 
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/scoretracker.js"></script>
   <script type="text/javascript" src="js/gamelogic.js"></script>
-  <script type="text/javascript" src="js/pnzjquery.js"></script>
 </body>
 </html>
