@@ -5,7 +5,7 @@ var roundCount = 1;
 var playerForWins;
 var playerGoChoose = '';
 var computerGoChoose = '';
-
+var randomIndex = '';
 var computerStrings = [
   'pirate',
   'ninja',
@@ -20,6 +20,8 @@ function playersTurn() {
   gameLogic();
   pnzAnimate();
 }
+
+//begin pirate ninja zombie animation
 
 function scoreUpdate() {
   $('.player-score .score-value').html(playerScore);
