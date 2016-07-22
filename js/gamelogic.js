@@ -22,6 +22,18 @@ function playersTurn() {
 }
 
 //begin pirate ninja zombie animation
+function pnzAnimate() {
+  var animationClock = 0;
+  //hide scoreboard
+  $('.score').fadeIn(250).delay(300);
+  $('.roundCount').fadeIn(450).delay(300);
+  //funct used in animation sequence to clear fontawesome classes
+  function clearClasses() {
+    unbindControls();
+  $('.animation-container.fa').removeClass
+   ('')  
+  }
+}
 
 function scoreUpdate() {
   $('.player-score .score-value').html(playerScore);
