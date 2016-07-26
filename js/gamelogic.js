@@ -54,7 +54,28 @@ window.setTimeout(function() {
 window.setTimeout(function() {
   anim1500('fa-hand-' + playerGoChoose + '-o', playerGoChoose);
 }, animationClock += 1600);
-
+window.setTimeout(function() {
+  anim1500('fa fa-empire', 'EMPIRE-STRIKES-BACK: ');
+}, animationClock  += 1600);
+window.setTimeout(function() {
+  anim1500('fa-hand-' + computerGoChoose + '-o', computerGoChoose);
+}, animationClock += 1600);
+window.setTimeout(function() {
+}, updateScores();
+  $('.score').delay(1150).fadeOut(450);
+  $('.roundCount').delay(1150).fadeOut(450);
+  //end screen
+  if(gameState == 'win'){
+    anim1500('fa fa-thumbs-up', 'YOU WIN');
+  } else if (gameState == 'lose'){
+    anim1500('fa fa-empire', 'EMPIRE WINS');
+  } else if (gameState == 'tie'){
+    anim1500('fa fa-hand-peace-o', 'TIE GAME');
+  }
+}, animationClock += 1600;
+window.setTimeout(function() {
+  clearClasses();
+})
 
 
 
