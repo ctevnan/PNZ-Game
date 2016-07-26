@@ -75,10 +75,18 @@ window.setTimeout(function() {
 }, animationClock += 1600;
 window.setTimeout(function() {
   clearClasses();
-})
-
-
-
+  endGame();
+},
+  $('.animation-container.fa').addClass('fa fa-thumbs-up');
+  $('.animation-container.message').html('ready round' + roundCount);
+  $('.animation-container').fadeIn(450).delay(600);
+    window.setTimeout(function() {
+     $('.roundCount.value').html(roundCount);
+      bindControls();
+    }, 1150;
+  }, animationClock += 1600;    
+}
+  
 function scoreUpdate() {
   $('.player-score .score-value').html(playerScore);
   $('.computer-score .score-value').html(computerScore);
