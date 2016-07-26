@@ -7,9 +7,9 @@ var playerGoChoose = '';
 var computerGoChoose = '';
 var randomIndex = '';
 var computerStrings = [
-  'pirate',
-  'ninja',
-  'zombie'
+  'rock',
+  'paper',
+  'scissors'
 ];
 
 function playersTurn() {
@@ -30,10 +30,33 @@ function pnzAnimate() {
   //funct used in animation sequence to clear fontawesome classes
   function clearClasses() {
     unbindControls();
-  $('.animation-container.fa').removeClass
-   ('')  
+  $('.animation-container.fa').removeClass('fa-hand-scissors-o').removeClass('fa-hand-rock-o').removeClass('fa-hand-paper-o').removeClass  
   }
 }
+//800 ms animation
+function anim800(rps) {
+  clearClasses();
+  $('.animation-container.fa').addClass(faIcon);
+  $('.animation-container.message').html(rps);
+  $('.animation-container.fadeIn').delay(300).fadeOut(250);
+}
+
+anim800('rock');
+window.setTimeout(function() {
+  anim800('paper');
+}, animationClock += 900);
+window.setTimeout(function(){
+  anim800('scissors');
+}, animationClock += 900);
+window.setTimeout(function() {
+  anim1500('fa-thumbs-up-o', 'YOU SHOT: ');
+}, animationClock += 900);
+window.setTimeout(function() {
+  anim1500('fa-hand-' + playerGoChoose + '-o', playerGoChoose);
+}, animationClock += 1600);
+
+
+
 
 function scoreUpdate() {
   $('.player-score .score-value').html(playerScore);
