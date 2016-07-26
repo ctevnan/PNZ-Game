@@ -2,6 +2,7 @@
 var playerScore = 0;
 var computerScore = 0;
 var roundCount = 1;
+var clearClasses;
 var playerForWins;
 var playerGoChoose = '';
 var computerGoChoose = '';
@@ -61,7 +62,7 @@ window.setTimeout(function() {
   anim1500('fa-hand-' + computerGoChoose + '-o', computerGoChoose);
 }, animationClock += 1600);
 window.setTimeout(function() {
-}, updateScores();
+}, updateScores());
   $('.score').delay(1150).fadeOut(450);
   $('.roundCount').delay(1150).fadeOut(450);
   //end screen
@@ -71,21 +72,20 @@ window.setTimeout(function() {
     anim1500('fa fa-empire', 'EMPIRE WINS');
   } else if (gameState == 'tie'){
     anim1500('fa fa-hand-peace-o', 'TIE GAME');
-  }
-}, animationClock += 1600;
+  } animationClock += 1600;
 window.setTimeout(function() {
   clearClasses();
   endGame();
 },
-  $('.animation-container.fa').addClass('fa fa-thumbs-up');
+  $('.animation-container.fa').addClass('fa fa-thumbs-up'));
   $('.animation-container.message').html('ready round' + roundCount);
   $('.animation-container').fadeIn(450).delay(600);
     window.setTimeout(function() {
      $('.roundCount.value').html(roundCount);
       bindControls();
-    }, 1150;
-  }, animationClock += 1600;    
-}
+    }), 1150;
+  animationClock += 1600;    
+
 
 function scoreUpdate() {
   $('.player-score .score-value').html(playerScore);

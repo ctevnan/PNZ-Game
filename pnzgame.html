@@ -1,160 +1,154 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Pirate, Ninja, Zombie Game</title>
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
-         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" type="text/css">
-         <link rel="stylesheet" type="text/css" href="css/pnz.css">
-         <link rel="stylesheet" type="text/css" href="css/contactpage.css">
-    </head>
-      <body>
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-             <a class="navbar-brand" href="#">
-                <ul class="image-list">
-                <li><li class="active"><a href="contactpage.html" target="_blank">Contact</a></li>
-                <li><img src="https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png"></li>
-                <li><img src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png"></li>
-                <li><img src="https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png"></li>
-               </ul>
-             </a> 
-          </div>
-        </nav>
-         <div class="collapse navbar-collapse navheaderCollapse">
-            <ul class="nav navbar-nav navbar-center"></ul>
-         </div>
-         <div class="jumbotron other-color" id="jumbo">
-            <div class="container">
-              <h2 div id="object1">Pirates! Ninjas! Zombies!</h2>
-              <p div id="object2">(Rock! Paper! Scissors!)</p>
-           </div>
-         </div>
-        <main class="animation-container">
-          <div class="panel panel-default" id="top">
-            <div class="panel-heading text-center other-color">
-               <img src="https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/64/piracy.png">
-               " Pirate, "
-                <img src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-64.png">
-               " Ninja, "
-                <img src="https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-64.png">
-               " Zombie!!"
+  <head>
+    <title>Rock, Paper, Scissors Game</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" type="text/css">
+      <link rel="stylesheet" type="text/css" href="css/pnz.css">
+      <link rel="stylesheet" type="text/css" href="css/contactpage.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <ul class="image-list">
+            <li><li class="active"><a href="contactpage.html" target="_blank">Contact</a></li>
+            <li><img src=""></li>
+            <li><img src=""></li>
+            <li><img src=""></li>
+          </ul>
+        </a> 
+      </div>
+    </nav>
+    <div class="collapse navbar-collapse navheaderCollapse">
+      <ul class="nav navbar-nav navbar-center"></ul>
+    </div>
+    <div class="jumbotron other-color" id="jumbo">
+      <div class="container">
+        <h2 div id="object1">Rock, Paper, Scissors</h2>
+      </div>
+    </div>
+    <main class="animation-container">
+      <div class="panel panel-default" id="top">
+        <div class="panel-heading text-center other-color"></div>
+      </div>
+      <div class="panel-body text-center other-color" id="body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <button class="btn btn-med" id="changeWordBtn">Change that word!</button>
             </div>
-          </div>
-          <div class="panel-body text-center other-color" id="body">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-6">
-                     <button class="btn btn-med" id="changeWordBtn">Change that word!</button>
-                  </div>
-                  <div class="col-md-6">
-                    <h1></h1>
-                  </div>
-                </div>
-              <div class="row">
-                <div class="col-md-4">
-                  <button id="pirate-button" data-choice="Pirate" class="choice-btn">
-                    <img src="https://cdn4.iconfinder.com/data/icons/SIGMA/networking/png/32/piracy.png">
-                     " Pirate "
-                  </button>
-                  <button id="ninja-button" data-choice="Ninja" class="choice-btn"> 
-                     <img src="https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-32.png">
-                    " Ninja " 
-                  </button>
-                  <button id="zombie-button" data-choice="Zombie" class="choice-btn"> 
-                       <img src="https://cdn3.iconfinder.com/data/icons/halloween-free-set/512/Halloween-17-32.png">
-                      " Zombie " 
-                   </button>           
-              <div class="row">
-                <div class="col-md-4">
-                  <strong>User Score: </strong><span id="userScore">0</span>
-                  <br />
+            <div class="col-md-6">
+              <h1></h1>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <button id="rock-button" data-choice="rock" class="choice-btn">
+                  <img src="">
+                    " Rock "
+                </button>
+                <button id="paper-button" data-choice="paper" class="choice-btn"> 
+                  <img src="">
+                    " Paper " 
+                </button>
+                <button id="scissors-button" data-choice="scissors" class="choice-btn"> 
+                  <img src="">
+                   " Scissors " 
+                </button>           
+            <div class="row">
+              <div class="col-md-4">
+                <strong>User Score: </strong><span id="userScore">0</span>
+                  <br/>
                   <button class="btn btn-info" data-tag="userScore">User Score</button>
-                </div>
-                <div class="col-md-4">
-                  <strong>Computer Score: </strong><span id="computerScore">0</span>
-                  <br />
+              </div>
+              <div class="col-md-4">
+                <strong>Computer Score: </strong><span id="computerScore">0</span>
+                  <br/>
                   <button class="btn btn-info" data-tag="computerScore">Computer Score</button>
-                </div>
-                <div class="col-md-4">
-                  <strong>Round Count: </strong><span id="roundCount">1</span>
-                  <br />
+              </div>
+              <div class="col-md-4">
+                <strong>Round Count: </strong><span id="roundCount">1</span>
+                  <br/>
                   <button class="btn btn-info" data-tag="roundCount">Round Count</button>
-                </div>
-              </div>  
+              </div>
+            </div>  
             <div id="reset-btn-div">
-            <br />
-            <br />
+            <br/>
+            <br/>
             <button type="button" class="btn btn-danger" id="resetButton" data-status="on">Reset Button</button>
-            <button class="btn btn-primary">Primary</button>
-             </div>
-             <br />
-             <br />
+              <button class="btn btn-primary">Primary</button>
+            </div>
+            <br/>
+            <br/>
              <!-- Button trigger modal -->
-             <div id="modal-btn-div">
-                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Score modal</button>
-             </div>
-           </div>
-         </div>   
-        </main> 
-         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>Close</button>
-                <h4 class="modal-title" id="#myModal">Score modal</h4>
-              </div>
-              <div class="modal-body">
-                  <h4>Game Over</h4>
-                </div>
-                <div class="modal-body text-center">
-                  <h4>
-                    "Your Score:     
-                    <span class="user-score">0</span>
-                  </h4>
-                  <h4>
-                    "Computer Score:    
-                    <span class="computer-score">0</span>
-                  </h4>
-                  <h4>
-                  "Tied Games:    
-                    <span class="tied-game-count">0</span>
-                  </h4>
-                  <h3 id="won-lost-or-tied-msg"></h3>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
+            <div id="modal-btn-div">
+              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Score modal</button>
             </div>
           </div>
         </div>
-        <footer id="footer" class="navbar navbar-inverse navbar-fixed-bottom">
-          <div class="container">
-            <div class="collapse navbar-collapse navHeaderCollapse">
-              <ul class="nav navbar-nav navbar-left">
-                <li>
-                  <a href="http://www.linkedin.com/in/CarolynTevnan33" target="_blank">
-                    <i class="fa fa-linkedin">
-                    </i>
-                  </a>
-                </li>
-                <li>
-                 <a href="http://www.twitter.com/CarolynTevnan33" target="_blank">
-                   <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-                 <li>
-                    <a href="http://www.github.com/ctevnan" target="_blank">
-                     <i class="fa fa-github">
-                     </i>
-                    </a>
-                 </li>
-              </ul>
-            </div>
+      </div>
+    </div> 
+  </div>        
+  </main> 
+   <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>Close</button>
+          <h4 class="modal-title" id="#myModal">Score modal</h4>
+        </div>
+        <div class="modal-body">
+            <h4>Game Over</h4>
           </div>
-        </footer>
+          <div class="modal-body text-center">
+            <h4>
+              "Your Score:     
+              <span class="user-score">0</span>
+            </h4>
+            <h4>
+              "Computer Score:    
+              <span class="computer-score">0</span>
+            </h4>
+            <h4>
+            "Tied Games:    
+              <span class="tied-game-count">0</span>
+            </h4>
+            <h3 id="won-lost-or-tied-msg"></h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer" class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container">
+      <div class="collapse navbar-collapse navHeaderCollapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <a href="http://www.linkedin.com/in/CarolynTevnan33" target="_blank">
+              <i class="fa fa-linkedin">
+              </i>
+            </a>
+          </li>
+          <li>
+           <a href="http://www.twitter.com/CarolynTevnan33" target="_blank">
+             <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+           <li>
+              <a href="http://www.github.com/ctevnan" target="_blank">
+               <i class="fa fa-github">
+               </i>
+              </a>
+           </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
   <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
   <script>
   // Initialize Firebase
