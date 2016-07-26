@@ -86,7 +86,7 @@ window.setTimeout(function() {
     }, 1150;
   }, animationClock += 1600;    
 }
-  
+
 function scoreUpdate() {
   $('.player-score .score-value').html(playerScore);
   $('.computer-score .score-value').html(computerScore);
@@ -98,8 +98,29 @@ function gameLogic() {
 
 computerGoChoose = computerStrings[randomIndex];
 
+//throw rock
 if(playerGoChoose == computerGoChoose) {
   gameState = 'tie';
+  roundCount += 1;
+} else if (theThrow == 'rock') {
+  if (enemyThrow == 'scissors') {
+    gameState = 'win';
+    userScore += 1;
+  } else if (enemyThrow == 'paper') {
+    gameState = 'lose';
+    enemyScore += 1;
+  }
+  roundCount += 1;
+}
+//throw scissors
+else if (theThrow == 'scissors') {
+  if (enemyThrow == 'rock') {
+    gameState = 'lose';
+    enemyScore += 1;
+  } else if (enemyThrow == 'paper'){
+    gameState = 'win';
+    userScore += 1;
+  }
   roundCount += 1;
 }
  
