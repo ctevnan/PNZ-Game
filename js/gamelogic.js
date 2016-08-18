@@ -95,10 +95,10 @@ function scoreUpdate() {
 function gameLogic() {
   var randomIndex = Math.floor(Math.random() * computerStrings.length);
 }
-
+//enemy throw
 computerGoChoose = computerStrings[randomIndex];
 
-//throw rock
+//tie
 if(playerGoChoose == computerGoChoose) {
   gameState = 'tie';
   roundCount += 1;
@@ -111,9 +111,7 @@ if(playerGoChoose == computerGoChoose) {
     enemyScore += 1;
   }
   roundCount += 1;
-}
-//throw scissors
-else if (theThrow == 'scissors') {
+} else if (theThrow == 'scissors') {
   if (enemyThrow == 'rock') {
     gameState = 'lose';
     enemyScore += 1;
@@ -122,6 +120,23 @@ else if (theThrow == 'scissors') {
     userScore += 1;
   }
   roundCount += 1;
+} else if (theThrow == 'paper') {
+  if(enemyThrow == 'rock') {
+    gameState = 'win';
+    userScore += 1;
+  } else if (enemyThrow == 'scissors'){
+    gameState = 'lose';
+    enemyScore += 1;
+  }
+  roundCount += 1;
+  }
+}
+
+function bindAnim(el){
+  $(el).bind('mouseenter', function(){
+    $(this).addClass('animate');
+  });
+  
 }
  
   $(".btn-primary").on("click", function() {
