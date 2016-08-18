@@ -150,6 +150,20 @@ function unbindAnim(el){
   $(el).unbind('mouseleave');
   $(el).unbind('click');
 }
+//bind and unbind controls
+function bindControls() {
+  $('.rock').bind('click', playerGoChoose);
+  $('.paper').bind('click', playerGoChoose);
+  $('.scissors').bind('click', playerGoChoose);
+  bindAnim('.control');
+}
+
+function unbindControls() {
+  $('.rock').unbind('click', playerGoChoose);
+  $('.paper').unbind('click', playerGoChoose);
+  $('.scissors').unbind('click', playerGoChoose);
+  unbindAnim('.control');
+}
  
   $(".btn-primary").on("click", function() {
     var computerGoSelect = Math.floor(Math.random() * computerStrings.length);
