@@ -197,6 +197,17 @@ $('.start').on('click', function() {
 bindAnim('.start');
 $('.blank-error').hide();
 
+//leaderboard code for firebase
+var LEADERBOARD_SIZE = 5;
+
+//create firebase reference
+var scoreListRef = new Firebase('https://rockpaperscissors.firebaseio.com');
+
+//keep a mapping of fb locations to html elements to move/remove elements
+var htmlForPath = {};
+
+
+
   $(".btn-primary").on("click", function() {
     var computerGoSelect = Math.floor(Math.random() * computerStrings.length);
     var playerGoSelect = parseInt($(this).attr("data-selection"));
