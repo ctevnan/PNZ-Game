@@ -188,9 +188,9 @@ function endGame() {
 $('.start').on('click', function() {
   bindControls();
   unbindAnim('.start');
-  $('animation-container .fa').addClass('fa-thumbs-up');
-  $('animation-container .message').html('ready round ' + roundCount);
-  $('animation-container').fadeIn(450).delay(600);
+  $('.animation-container .fa').addClass('fa-thumbs-up');
+  $('.animation-container .message').html('ready round ' + roundCount);
+  $('.animation-container').fadeIn(450).delay(600);
 });
 
 //run at startup
@@ -201,7 +201,7 @@ $('.blank-error').hide();
 var LEADERBOARD_SIZE = 5;
 
 //create firebase reference
-var scoreListRef = new Firebase('https://rockpaperscissors.firebaseio.com');
+var scoreListRef = new Firebase('https://pirate-ninja-zombies-game.firebaseio.com');
 
 //keep a mapping of fb locations to html elements to move/remove elements
 var htmlForPath = {};
