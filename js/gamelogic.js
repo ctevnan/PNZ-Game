@@ -164,6 +164,28 @@ function unbindControls() {
   $('.scissors').unbind('click', playerGoChoose);
   unbindAnim('.control');
 }
+
+//end game
+function endGame() {
+  if (roundCount > 10) {
+    //set score for firebase
+  $('#scoreInput').val(userScore);
+  if (userScore > enemyScore) {
+  $('#winModal').modal('toggle');
+    roundCount = 1;
+    userScore = 0;
+    enemyScore = 0;  
+  } else {
+    $('#tieModal').modal('toggle');
+      roundCount = 1;
+      userScore = 0;
+      enemyScore = 0;
+    }
+  }
+}
+
+//start game
+
  
   $(".btn-primary").on("click", function() {
     var computerGoSelect = Math.floor(Math.random() * computerStrings.length);
