@@ -231,3 +231,16 @@ function handleScoreRemoved(scoreSnapshot) {
   removedScoreRow.remove();
   delete htmlForPath[scoreSnapshot.key()];
 }
+
+//create a view to only recieve callbacks for the last leaderboard_size
+var scoreListView = scoreListRef.limitToLast(LEADERBOARD_SIZE);
+
+//add a cb to handle when a new score is added
+scoreListView.on('child-added', function (newScoreSnapshot, previousScoreName){
+  handleScoreAdded(newScoreSnapshot, previousScoreName);
+});
+
+//add a cb to handle when a score is removed
+scoreListView.on('child-removed', function (oldScoreSnapshot) {
+  handleScoreRemoved(oldScoreSnapshot);
+});
