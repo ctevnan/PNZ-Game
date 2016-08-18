@@ -206,6 +206,13 @@ var scoreListRef = new Firebase('https://rockpaperscissors.firebaseio.com');
 //keep a mapping of fb locations to html elements to move/remove elements
 var htmlForPath = {};
 
+//helper funct to take new score snapshots plus add a row to leaderboard
+function handleScoreAdded(scoreSnapshot, previousScoreName) {
+  var newScoreRow = $("<tr/>");
+  newScoreRow.append($("<td/>").append($("<em/>") {
+    text(scoreSnapshot.val().name));
+  newScoreRow.append($("<td/>").text(scoreSnapshot.val().score));
+}
 
 
   $(".btn-primary").on("click", function() {
