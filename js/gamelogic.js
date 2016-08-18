@@ -244,3 +244,12 @@ scoreListView.on('child-added', function (newScoreSnapshot, previousScoreName){
 scoreListView.on('child-removed', function (oldScoreSnapshot) {
   handleScoreRemoved(oldScoreSnapshot);
 });
+
+//add a cb for when a score changes or moves positions
+var changedCallback = function (scoreSnapshot, previousScoreName) {
+  handleScoreRemoved(scoreSnapshot);
+  handleScoreAdded(scoreSnapshot, previousScoreName);
+};
+scoreListView.on('.child-removed', changedCallback);
+scoreListView.on('.child-changed', changedCallback);  
+}
