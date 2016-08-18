@@ -253,3 +253,26 @@ var changedCallback = function (scoreSnapshot, previousScoreName) {
 scoreListView.on('.child-removed', changedCallback);
 scoreListView.on('.child-changed', changedCallback);  
 }
+
+//when the user presses enter on scoreInput, add the score and update the highest score
+$("#nameInput").keypress(function(e) {
+  if (e.keyCode === 13) {
+    if ($("#nameInput").val().trim()!=" "){
+      var newScore = Number($("#scoreInput").val());
+      var name = $("#nameInput").val();
+      $('.blank-error').hide();
+      $("#scoreInput").val(" ");
+
+      if(name.length === 0)
+      return;
+      
+      var userScoreRef = scoreListRef.child(name);
+      $("#nameInput").val(" ");
+      $("#winModal").modal('toggle');
+
+      userScoreRef.setWithPriority({name: name, score: newScore}, newScore);
+    } else {
+      $(".blank-error").fadeIn();
+    }    
+  }
+});
