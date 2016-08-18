@@ -185,8 +185,18 @@ function endGame() {
 }
 
 //start game
+$('.start').on('click', function() {
+  bindControls();
+  unbindAnim('.start');
+  $('animation-container .fa').addClass('fa-thumbs-up');
+  $('animation-container .message').html('ready round ' + roundCount);
+  $('animation-container').fadeIn(450).delay(600);
+});
 
- 
+//run at startup
+bindAnim('.start');
+$('.blank-error').hide();
+
   $(".btn-primary").on("click", function() {
     var computerGoSelect = Math.floor(Math.random() * computerStrings.length);
     var playerGoSelect = parseInt($(this).attr("data-selection"));
