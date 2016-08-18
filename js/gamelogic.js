@@ -133,10 +133,15 @@ if(playerGoChoose == computerGoChoose) {
 }
 
 function bindAnim(el){
-  $(el).bind('mouseenter', function(){
+  $(el).bind('mouseenter', function() {
     $(this).addClass('animate');
   });
-  
+  $(el).bind('mouseleave', function() {
+    $(this).removeClass('animate');
+  });
+  $(el).bind('click', function() {
+    $(this).removeClass('animate');
+  });
 }
  
   $(".btn-primary").on("click", function() {
