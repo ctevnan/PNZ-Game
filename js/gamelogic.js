@@ -143,6 +143,13 @@ function bindAnim(el){
     $(this).removeClass('animate');
   });
 }
+
+function unbindAnim(el){
+  $(el).removeClass('animate');
+  $(el).unbind('mouseenter');
+  $(el).unbind('mouseleave');
+  $(el).unbind('click');
+}
  
   $(".btn-primary").on("click", function() {
     var computerGoSelect = Math.floor(Math.random() * computerStrings.length);
