@@ -224,3 +224,10 @@ if (previousScoreName === null) {
   var lowerScoreRow = htmlForPath[previousScoreName];
   lowerScoreRow.before(newScoreRow);
 }
+
+//helper funct to handle score obj removal- removes corrasponding table row
+function handleScoreRemoved(scoreSnapshot) {
+  var removedScoreRow = htmlForPath[scoreSnapshot.key()];
+  removedScoreRow.remove();
+  delete htmlForPath[scoreSnapshot.key()];
+}
